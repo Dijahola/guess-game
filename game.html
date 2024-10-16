@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>guess game</title>
+    <style>
+        body{
+            height: 500px;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(img3-1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            padding-left: 500px;
+            padding-right: 500px;
+            padding-top: 200px;
+        }
+        .container{
+            padding-left: 60px;
+            padding-top: 100px;
+            align-items: center;
+            background-color: rgba(75, 73, 74, 0.37);
+            width: 300px;
+            height: 500px;
+            
+
+        }
+        #preview{
+            width: 150px;
+            height: 50px;
+            background-color:white;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+        }
+        #input{
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            margin-left: 60px;
+        }
+        button{
+            margin-left: 30px;
+            background-color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="preview"> <p >pick a Num 0-10</p></div>
+        <input type="text" id="input">
+        <br>
+        <button onclick="Guess()">Check Guess</button>
+    </div>
+
+        
+</body>
+</html>
+
+<script>
+    function Guess(){
+        var guess = document.getElementById('input').value;
+        var randomNum = Math.floor(Math.random() * 10);
+        document.getElementById('preview').innerText = "your guess is: " + guess + " and the random number is: " + randomNum; 
+        document.getElementById('input').value = '';
+        }
+
+</script>
+
+    
